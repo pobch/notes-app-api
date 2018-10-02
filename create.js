@@ -2,7 +2,7 @@ import uuid from 'uuid'
 import AWS from 'aws-sdk'
 
 AWS.config.update({ region: 'ap-southeast-1' })
-const dynamoDb = AWS.DynamoDB.DocumentClient()
+const dynamoDb = new AWS.DynamoDB.DocumentClient()
 
 export function main(event, context, callback) {
   const data = JSON.parse(event.body)
