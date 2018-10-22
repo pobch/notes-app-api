@@ -21,7 +21,7 @@ export async function main(event, context, callback) {
     const response = success(params.Item)
     callback(null, response)
   } catch(error) {
-    callback(null, { status: false })
+    callback(null, failure({ status: false }))
   }
   
 }
